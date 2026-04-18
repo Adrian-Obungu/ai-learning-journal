@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Slide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            box-sizing: border-box;
+            background: #0A2540;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .main-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 64px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .author-name {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 32px;
+            color: #E0E6ED;
+            margin-bottom: 10px;
+        }
+        .affiliation {
+            font-family: 'Inter', sans-serif;
+            font-weight: 200;
+            font-size: 20px;
+            color: #E0E6ED;
+            margin-bottom: 40px;
+        }
+        .social-links {
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .social-links a {
+            color: #FFD700;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        .geometric-shape {
+            position: absolute;
+            background-color: rgba(255, 215, 0, 0.1);
+            opacity: 0.3;
+        }
+        .square1 {
+            width: 150px;
+            height: 150px;
+            top: -50px;
+            left: -50px;
+            transform: rotate(45deg);
+        }
+        .square2 {
+            width: 100px;
+            height: 100px;
+            bottom: -30px;
+            right: -30px;
+            transform: rotate(-30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="geometric-shape square1"></div>
+        <div class="geometric-shape square2"></div>
+        <h1 class="main-title">Mathematical Foundations for AI Engineering: Solving Linear Systems with Python</h1>
+        <p class="author-name">Adrian S. Obungu</p>
+        <p class="affiliation">Cybersecurity Professional in training</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/adrian-o-9b4856260?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Adrian-Obungu" target="_blank">GitHub</a>
+        </div>
+    </div>
+</body>
+</html>

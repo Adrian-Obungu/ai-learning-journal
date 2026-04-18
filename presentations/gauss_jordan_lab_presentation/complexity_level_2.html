@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #0A0A0A;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, #2E2E2E 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        .content-wrapper {
+            z-index: 3;
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #00FFFF;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2E2E2E;
+            padding-bottom: 10px;
+        }
+        .main-content {
+            display: flex;
+            gap: 40px;
+            flex: 1;
+        }
+        .code-section {
+            flex: 1.2;
+            background: #1A1A1A;
+            border: 1px solid #2E2E2E;
+            padding: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            color: #00FFFF;
+            min-height: 450px;
+        }
+        .code-keyword { color: #FF00FF; }
+        .code-comment { color: #666666; }
+        .info-section {
+            flex: 0.8;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .level-badge {
+            background: #FF00FF;
+            color: #FFFFFF;
+            padding: 5px 15px;
+            font-weight: 700;
+            display: inline-block;
+            width: fit-content;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            color: #FFFFFF;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #E0E0E0;
+        }
+        .highlight {
+            color: #00FFFF;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="content-wrapper">
+            <h1>Complexity Level 2: Step-by-Step Implementation</h1>
+            <div class="main-content">
+                <div class="code-section">
+                    <span class="code-keyword">def</span> <span class="code-function">_manual_gauss_jordan</span>(matrix, verbose=True):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment"># Iterate through rows to find pivots</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">for</span> r <span class="code-keyword">in</span> range(rows):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment"># 1. Find the leading entry</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pivot = matrix[r, lead]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">if</span> pivot != 0:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment"># 2. Scale row to get leading 1</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix[r] = matrix[r] * (1 / pivot)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment"># 3. Eliminate other entries in column</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">for</span> i_row <span class="code-keyword">in</span> range(rows):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">if</span> i_row != r:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factor = matrix[i_row, lead]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix[i_row] -= factor * matrix[r]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lead += 1
+                </div>
+                <div class="info-section">
+                    <div class="level-badge">Intermediate</div>
+                    <h2>Objective: Algorithmic Transparency</h2>
+                    <p>At this level, we strip away the abstraction of high-level solvers to manually execute each <span class="highlight">Elementary Row Operation</span>. This provides full visibility into the matrix transformation process.</p>
+                    <h2>Real-World Application</h2>
+                    <p>This approach is essential for developing custom linear algebra routines, debugging complex numerical algorithms, and understanding the computational cost associated with each step of the reduction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

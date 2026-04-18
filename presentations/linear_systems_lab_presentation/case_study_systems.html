@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Study: Ill-Conditioned & Singular Systems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #0A2540;
+            color: #E0E6ED;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            padding-top: 60px;
+            text-align: center;
+        }
+        h1 {
+            font-weight: 800;
+            font-size: 32px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px 80px 0 80px;
+        }
+        .study-box {
+            border: 1px dashed rgba(255, 215, 0, 0.3);
+            padding: 30px;
+            position: relative;
+        }
+        h2 {
+            font-weight: 800;
+            font-size: 24px;
+            color: #FFD700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        h2::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #FFD700;
+            margin-right: 15px;
+            transform: rotate(45deg);
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.3);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #A5D6FF;
+            border-left: 2px solid #FFD700;
+        }
+        .section-title {
+            font-weight: 800;
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 5px;
+        }
+        ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+        li::before {
+            content: '>';
+            color: #FFD700;
+            margin-right: 10px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Case Study: Ill-Conditioned & Singular Systems</h1>
+        </div>
+
+        <div class="grid-container">
+            <!-- Ill-Conditioned Systems -->
+            <div class="study-box">
+                <h2>Ill-Conditioned Systems</h2>
+                <p>Systems where small input perturbations lead to massive solution variance. Characterized by a high <strong>Condition Number</strong>.</p>
+                
+                <div class="code-block">
+                    A_ill = np.array([[1.000, 2.000],<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.001, 2.001]])<br>
+                    cond = np.linalg.cond(A_ill)
+                </div>
+
+                <div class="section-title">Implications for AI</div>
+                <ul>
+                    <li>Unstable gradients during backpropagation.</li>
+                    <li>Poor convergence in deep neural networks.</li>
+                    <li>Necessitates feature scaling & regularization.</li>
+                </ul>
+            </div>
+
+            <!-- Singular Systems -->
+            <div class="study-box">
+                <h2>Singular Systems</h2>
+                <p>Systems with no unique solution (inconsistent or dependent). The coefficient matrix is <strong>non-invertible</strong> (Det = 0).</p>
+                
+                <div class="code-block">
+                    A_singular = np.array([[1, 1],<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1, 1]])<br>
+                    # Parallel lines: No intersection
+                </div>
+
+                <div class="section-title">Implications for AI</div>
+                <ul>
+                    <li>Multicollinearity in regression models.</li>
+                    <li>Redundant features causing overfitting.</li>
+                    <li>Requires Dimensionality Reduction (PCA).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

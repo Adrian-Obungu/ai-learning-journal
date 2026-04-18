@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #0A0A0A;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, #2E2E2E 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        .content-wrapper {
+            z-index: 3;
+            padding-top: 60px;
+            padding-left: 60px;
+            padding-right: 60px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            color: #00FFFF;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2E2E2E;
+            padding-bottom: 10px;
+        }
+        .outcomes-grid {
+            display: flex;
+            gap: 30px;
+            flex: 1;
+            margin-top: 10px;
+        }
+        .outcome-card {
+            flex: 1;
+            background: rgba(46, 46, 46, 0.15);
+            border-top: 3px solid #FF00FF;
+            padding-top: 25px;
+            padding-left: 20px;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .outcome-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #00FFFF;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .matrix-box {
+            font-family: 'Fira Code', monospace;
+            background: #1A1A1A;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid #2E2E2E;
+        }
+        .description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #E0E0E0;
+        }
+        .highlight {
+            color: #FF00FF;
+            font-weight: 700;
+        }
+        .variable-tag {
+            display: inline-block;
+            background: rgba(0, 255, 255, 0.1);
+            color: #00FFFF;
+            padding: 2px 8px;
+            font-size: 14px;
+            margin-top: 10px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="content-wrapper">
+            <h1>Interpreting RREF: Solutions & Variables</h1>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-title">Unique Solution</div>
+                    <div class="matrix-box">
+                        [ 1 0 0 | a ]<br>
+                        [ 0 1 0 | b ]<br>
+                        [ 0 0 1 | c ]
+                    </div>
+                    <div class="description">
+                        <p>A unique solution exists when every column of the coefficient matrix contains a <span class="highlight">pivot position</span>. The system is consistent, and each variable is a basic variable with a fixed value.</p>
+                    </div>
+                </div>
+                <div class="outcome-card" style="border-top-color: #FF3B3B;">
+                    <div class="outcome-title" style="color: #FF3B3B;">Inconsistent</div>
+                    <div class="matrix-box">
+                        [ 1 0 2 | 0 ]<br>
+                        [ 0 1 3 | 0 ]<br>
+                        [ 0 0 0 | 1 ]
+                    </div>
+                    <div class="description">
+                        <p>The system is inconsistent if a pivot exists in the <span class="highlight">augmented column</span>. This results in a mathematical contradiction (e.g., 0 = 1), indicating no solution exists.</p>
+                    </div>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-title">Infinite Solutions</div>
+                    <div class="matrix-box">
+                        [ 1 0 2 | 5 ]<br>
+                        [ 0 1 3 | 2 ]<br>
+                        [ 0 0 0 | 0 ]
+                    </div>
+                    <div class="description">
+                        <p>Infinite solutions occur when the system is consistent but contains <span class="highlight">free variables</span> (columns without pivots). Basic variables are expressed in terms of these parameters.</p>
+                        <div class="variable-tag">Basic: x1, x2</div>
+                        <div class="variable-tag">Free: x3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

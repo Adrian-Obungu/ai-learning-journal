@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Combinations & Vector Space Axioms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #0A1128;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            color: #E0E0E0;
+            display: flex;
+            flex-direction: column;
+            padding-top: 40px;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+        }
+        .content-area {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 60px 20px 60px;
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .two-column-layout {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 24px;
+            flex-grow: 1;
+            width: 100%;
+        }
+        .column {
+            flex: 1;
+            background-color: rgba(0, 191, 255, 0.05);
+            border: 1px solid rgba(0, 191, 255, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 500px;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #00BFFF;
+            margin-bottom: 18px;
+            border-bottom: 2px solid rgba(0, 191, 255, 0.3);
+            padding-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            font-size: 16px;
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+        ul li::before {
+            content: '\f061';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #FF4500;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .code-block {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #FFD700;
+            padding: 10px;
+            margin-top: 12px;
+            font-family: 'Space Mono', monospace;
+            font-size: 14px;
+            color: #E0E0E0;
+            overflow-x: auto;
+        }
+        .axiom-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .axiom-list li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="content-area">
+            <h1>Linear Combinations & Vector Space Axioms</h1>
+            <div class="two-column-layout">
+                <div class="column">
+                    <h2><i class="fas fa-bezier-curve"></i> Linear Combinations: The Core of AI</h2>
+                    <p>A **linear combination** of vectors $v_1, \dots, v_k$ is an expression of the form:</p>
+                    <div class="code-block">
+                        $y = c_1v_1 + c_2v_2 + \dots + c_kv_k$
+                    </div>
+                    <p>where $c_1, \dots, c_k$ are scalars (weights). This fundamental concept describes how vectors can be combined to form new vectors.</p>
+                    
+                    <h3>Relevance to AI & Cybersecurity:</h3>
+                    <ul>
+                        <li>**Neural Networks**: Each neuron computes a linear combination of its inputs.</li>
+                        <li>**Feature Engineering**: Combining raw features to create more expressive ones.</li>
+                        <li>**Data Blending**: Creating new data points from existing ones.</li>
+                        <li>**Solving $Ax=b$**: Determining if a vector $b$ is a linear combination of the columns of matrix $A$ is equivalent to solving the system $Ax=b$.</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h2><i class="fas fa-balance-scale"></i> Vector Space Axioms: Rules of Engagement</h2>
+                    <p>Vector spaces are governed by a set of axioms that ensure mathematical consistency and predictability for vector operations. These are the fundamental rules that all vectors must obey.</p>
+                    
+                    <h3>Key Axioms (for vector addition and scalar multiplication):</h3>
+                    <ol class="axiom-list">
+                        <li>Closure under addition ($u+v$ is in the space)</li>
+                        <li>Commutativity of addition ($u+v = v+u$)</li>
+                        <li>Associativity of addition ($(u+v)+w = u+(v+w)$)</li>
+                        <li>Existence of a zero vector ($u+0 = u$)</li>
+                        <li>Existence of an additive inverse ($u+(-u) = 0$)</li>
+                        <li>Closure under scalar multiplication ($cu$ is in the space)</li>
+                        <li>Distributivity of scalar over vector addition ($c(u+v) = cu+cv$)</li>
+                        <li>Distributivity of scalar over scalar addition ($(c+d)u = cu+du$)</li>
+                        <li>Associativity of scalar multiplication ($c(du) = (cd)u$)</li>
+                        <li>Identity for scalar multiplication ($1u = u$)</li>
+                    </ol>
+                    <p>These axioms guarantee that vector manipulations in AI and cybersecurity (e.g., data transformations, model updates) behave as expected.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #0A0A0A;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, #2E2E2E 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        .content-wrapper {
+            z-index: 3;
+            padding-top: 60px; /* keep title top padding */
+            padding-left: 80px;
+            padding-right: 80px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #00FFFF;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2E2E2E;
+            padding-bottom: 10px;
+        }
+        /* New layout: place table and visual side-by-side to avoid stacking height */
+        .main-row {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .table-container {
+            width: 100%;
+            overflow: hidden;
+            flex: 1 1 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 18px;
+            background: rgba(46, 46, 46, 0.2);
+        }
+        th, td {
+            padding: 12px; /* shrink inner padding to reduce per-row height */
+            text-align: left;
+            border: 1px solid #2E2E2E;
+        }
+        th {
+            background: #1A1A1A;
+            color: #00FFFF;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+        }
+        .highlight-magenta { color: #FF00FF; font-weight: 700; }
+        .visual-container {
+            width: 420px; /* fixed column to the right */
+            margin-top: 0; /* reset vertical gap since it's side-by-side */
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        #matrix-viz {
+            width: 400px;
+            height: 220px; /* reduce svg height */
+            background: #1A1A1A;
+            border: 1px solid #2E2E2E;
+        }
+        .viz-description {
+            flex: 1;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #E0E0E0;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="content-wrapper">
+            <h1>Core Logic: REF vs. RREF</h1>
+            <div class="main-row">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Condition</th>
+                                <th>Row-Echelon Form (REF)</th>
+                                <th>Reduced Row-Echelon Form (RREF)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rows of Zeros</td>
+                                <td>Must be grouped at the bottom.</td>
+                                <td>Must be grouped at the bottom.</td>
+                            </tr>
+                            <tr>
+                                <td>Leading Entry</td>
+                                <td>Must be to the right of the leading entry above it.</td>
+                                <td>Must be to the right of the leading entry above it.</td>
+                            </tr>
+                            <tr>
+                                <td>Column Below Pivot</td>
+                                <td>All entries below leading entry must be zero.</td>
+                                <td>All entries below leading entry must be zero.</td>
+                            </tr>
+                            <tr>
+                                <td>Leading Value</td>
+                                <td>Any non-zero real number.</td>
+                                <td><span class="highlight-magenta">Must be exactly 1.</span></td>
+                            </tr>
+                            <tr>
+                                <td>Column Above Pivot</td>
+                                <td>Any non-zero real number.</td>
+                                <td><span class="highlight-magenta">Must be exactly 0.</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="visual-container">
+                    <div id="matrix-viz"></div>
+                    <div class="viz-description">
+                        <p>The <span class="highlight-magenta">stair-step pattern</span> is a defining visual characteristic of echelon forms. Every matrix is row-equivalent to a unique matrix in RREF, making it a deterministic target for algorithms.</p>
+                        <p>In REF, the leading entries define pivot positions, which are critical for identifying basic and free variables in a system of linear equations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const svg = d3.select("#matrix-viz")
+            .append("svg")
+            .attr("width", 400)
+            .attr("height", 220);
+
+        const data = [
+            [1, 2, 3, 4],
+            [0, 1, 5, 6],
+            [0, 0, 1, 7],
+            [0, 0, 0, 0]
+        ];
+
+        const cellSize = 50;
+        const margin = 10;
+
+        data.forEach((row, i) => {
+            row.forEach((cell, j) => {
+                const color = cell === 1 && (i === j || (i === 2 && j === 2)) ? "#00FFFF" : (cell === 0 ? "#2E2E2E" : "#FFFFFF");
+                svg.append("rect")
+                    .attr("x", j * cellSize + margin + 20)
+                    .attr("y", i * cellSize + margin + 10)
+                    .attr("width", cellSize - 8)
+                    .attr("height", cellSize - 8)
+                    .attr("fill", "transparent")
+                    .attr("stroke", color)
+                    .attr("stroke-width", 2);
+                
+                svg.append("text")
+                    .attr("x", j * cellSize + margin + 20 + cellSize / 2 - 2.5)
+                    .attr("y", i * cellSize + margin + 10 + cellSize / 2 + 5)
+                    .attr("text-anchor", "middle")
+                    .attr("fill", color)
+                    .attr("font-size", "14px")
+                    .text(cell);
+            });
+        });
+
+        svg.append("path")
+            .attr("d", "M 85 30 L 85 80 L 135 80 L 135 130 L 185 130 L 185 180")
+            .attr("stroke", "#FF00FF")
+            .attr("stroke-width", 2)
+            .attr("fill", "none")
+            .attr("stroke-dasharray", "5,5");
+    </script>
+</body>
+</html>

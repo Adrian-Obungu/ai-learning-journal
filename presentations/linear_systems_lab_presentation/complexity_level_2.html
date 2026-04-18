@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complexity Level 2: Conceptual Gaussian Elimination</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: #0A2540; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            box-sizing: border-box;
+            background: #0A2540;
+            color: #E0E6ED;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            border-bottom: 1px dashed #FFD700;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-weight: 800;
+            font-size: 32px;
+            color: #FFFFFF;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            flex-grow: 1;
+        }
+        h2 {
+            font-weight: 800;
+            font-size: 22px;
+            color: #FFD700;
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #FFD700;
+            margin-right: 15px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .step-box {
+            font-family: 'Fira Code', monospace;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-left: 4px solid #FFD700;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+        li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: #FFD700;
+            font-weight: 800;
+        }
+        .accent-text {
+            color: #FFD700;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h1>Complexity Level 2: Conceptual Gaussian Elimination</h1>
+        </div>
+        <div class="grid">
+            <div class="left-col">
+                <div class="section">
+                    <h2>Objective</h2>
+                    <p style="font-size: 18px; line-height: 1.6;">
+                        Deconstruct the <span class="accent-text">algorithmic mechanics</span> of row reduction that standard libraries perform internally.
+                    </p>
+                </div>
+                <div class="section">
+                    <h2>Conceptual Breakdown</h2>
+                    <div class="step-box">
+                        01. FORWARD ELIMINATION:<br>
+                        Transform matrix into upper triangular form (Echelon Form) using EROs.<br><br>
+                        02. BACK SUBSTITUTION:<br>
+                        Solve for variables starting from the last equation and substitute upwards.
+                    </div>
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="section">
+                    <h2>Tweaks & Improvements</h2>
+                    <ul>
+                        <li>Implementing <span class="accent-text">Manual EROs</span> for custom solvers.</li>
+                        <li>Optimizing <span class="accent-text">Pivot Selection</span> strategies.</li>
+                        <li>Handling floating-point inaccuracies for stability.</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Real-world Applications</h2>
+                    <ul>
+                        <li><span class="accent-text">Custom Solvers</span>: Specialized hardware (FPGAs).</li>
+                        <li><span class="accent-text">Educational Tools</span>: Visualizing math concepts.</li>
+                        <li><span class="accent-text">Numerical Stability</span>: Sensitive scientific simulations (Climate, Physics).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

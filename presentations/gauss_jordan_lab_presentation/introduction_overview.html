@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #0A0A0A;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, #2E2E2E 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        .header-bar {
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(90deg, #00FFFF, transparent);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.2;
+            z-index: 2;
+        }
+        .content-wrapper {
+            z-index: 3;
+            padding-top: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 48px;
+            color: #00FFFF;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2E2E2E;
+            padding-bottom: 10px;
+        }
+        .split-layout {
+            display: flex;
+            gap: 60px;
+            flex: 1;
+        }
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .concept-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #FF00FF;
+            margin-bottom: 10px;
+        }
+        .concept-title.cyan {
+            color: #00FFFF;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #E0E0E0;
+        }
+        .highlight {
+            color: #FFFFFF;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="header-bar"></div>
+        <div class="content-wrapper">
+            <h1>Introduction & Module Overview</h1>
+            <div class="split-layout">
+                <div class="column">
+                    <div class="concept-title cyan">The Foundation of AI Logic</div>
+                    <p>Before we deploy complex neural networks, we must understand the fundamental logic that powers their optimization. This module transitions from basic linear equations to the precise mathematical states required for algorithmic problem-solving.</p>
+                    <p>We focus on transforming raw data matrices into structured forms that reveal the underlying relationships and solutions within the system.</p>
+                </div>
+                <div class="column">
+                    <div class="concept-title">REF and RREF</div>
+                    <p>The <span class="highlight">Row-Echelon Form (REF)</span> represents an intermediate, stair-step structure where systems become solvable via back-substitution. It is the initial goal of Gaussian elimination.</p>
+                    <p>The <span class="highlight">Reduced Row-Echelon Form (RREF)</span> is the ultimate, unique state achieved through Gauss-Jordan elimination. In RREF, the solutions to the system can be read directly, forming the bedrock of deterministic computational linear algebra.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

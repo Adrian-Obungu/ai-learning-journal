@@ -1,0 +1,144 @@
+{
+  "project_info": {
+    "title": "Mathematical Foundations for AI Engineering: Row-Echelon Form & Gauss-Jordan Elimination",
+    "created": 1775081446.9057357,
+    "last_updated": 1775081784.8185217,
+    "total_slides": 11
+  },
+  "slides": [
+    {
+      "id": "title_slide",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "introduction_overview",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "core_logic_ref_rref",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "gauss_jordan_process",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "active_lab_overview",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "complexity_level_1",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "complexity_level_2",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "complexity_level_3",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "interpreting_rref_solutions",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "learn_along_protocol",
+      "state": "edited",
+      "pageNum": 10
+    },
+    {
+      "id": "closing_slide",
+      "state": "edited",
+      "pageNum": 11
+    }
+  ],
+  "outline": [
+    {
+      "id": "title_slide",
+      "title": "Mathematical Foundations for AI Engineering: Row-Echelon Form & Gauss-Jordan Elimination",
+      "summary": "Title slide with accreditation to Adrian S. Obungu and social links.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "introduction_overview",
+      "title": "Introduction & Module Overview",
+      "summary": "Briefly introduces the core concepts of Row-Echelon Form (REF) and Reduced Row-Echelon Form (RREF) as foundational elements of AI engineering.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "core_logic_ref_rref",
+      "title": "Core Logic: REF vs. RREF",
+      "summary": "Explains the mathematical conditions for a matrix to be in REF and RREF, emphasizing the uniqueness of the RREF.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "gauss_jordan_process",
+      "title": "The Gauss-Jordan Elimination Process",
+      "summary": "Outlines the algorithmic steps of using elementary row operations to reach RREF.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "active_lab_overview",
+      "title": "Active Lab: Implementing Gauss-Jordan in Python",
+      "summary": "Introduces the Active Lab and its objective: to bridge the gap between mathematical theory and computational implementation.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "complexity_level_1",
+      "title": "Complexity Level 1: Conceptual Foundations",
+      "summary": "Discusses the basic understanding of the algorithm's outcome and its real-world relevance in high-level AI libraries.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "complexity_level_2",
+      "title": "Complexity Level 2: Step-by-Step Implementation",
+      "summary": "Explores the manual execution of elementary row operations in code for debugging and deep algorithmic understanding.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "complexity_level_3",
+      "title": "Complexity Level 3: Advanced Numerical Analysis",
+      "summary": "Addresses numerical stability, pivot selection strategies, and their importance in high-precision scientific computing.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "interpreting_rref_solutions",
+      "title": "Interpreting RREF: Solutions & Variables",
+      "summary": "Explains how to identify unique solutions, inconsistent systems, and infinite solutions (with basic and free variables) from the RREF.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "learn_along_protocol",
+      "title": "Join the Journey: The 'Learn Along' Protocol",
+      "summary": "Invites the audience to engage with the GitHub repository, fork the project, and start their own AI engineering learning path.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "closing_slide",
+      "title": "Conclusion & Contact Information",
+      "summary": "Final slide with a summary of key takeaways and Adrian S. Obungu's contact details.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    }
+  ]
+}

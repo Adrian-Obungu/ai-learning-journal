@@ -1,0 +1,108 @@
+{
+  "project_info": {
+    "title": "Mathematical Foundations for AI Engineering: Solving Linear Systems with Python",
+    "created": 1774577233.1753135,
+    "last_updated": 1774577276.3848197,
+    "total_slides": 8
+  },
+  "slides": [
+    {
+      "id": "title_slide",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "linear_algebra_fundamentals",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "active_lab_introduction",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "complexity_level_1",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "complexity_level_2",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "complexity_level_3",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "case_study_systems",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "key_takeaways_next_steps",
+      "state": "edited",
+      "pageNum": 8
+    }
+  ],
+  "outline": [
+    {
+      "id": "title_slide",
+      "title": "Mathematical Foundations for AI Engineering: Solving Linear Systems with Python",
+      "summary": "Introduction to the presentation, author, and contact information.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "linear_algebra_fundamentals",
+      "title": "The Language of AI: Linear Algebra Fundamentals",
+      "summary": "Overview of linear equations, systems of linear equations, matrices, and row operations.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "active_lab_introduction",
+      "title": "Bridging Theory to Practice: The Active Lab",
+      "summary": "Introduction to the lab's objective, importance, and practical aspects.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "complexity_level_1",
+      "title": "Complexity Level 1: Basic Solution (NumPy Solver)",
+      "summary": "Details on using NumPy for basic solutions, its applications, and improvements.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "complexity_level_2",
+      "title": "Complexity Level 2: Conceptual Gaussian Elimination",
+      "summary": "Explanation of Gaussian Elimination steps, its importance, and advanced applications.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "complexity_level_3",
+      "title": "Complexity Level 3: Advanced Analysis (Condition Number)",
+      "summary": "Discussion on condition number, its role in solution sensitivity, and real-world relevance.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "case_study_systems",
+      "title": "Case Study: Ill-Conditioned & Singular Systems",
+      "summary": "Explanation of ill-conditioned and singular systems, their examples, and implications for AI.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "key_takeaways_next_steps",
+      "title": "Key Takeaways & Next Steps",
+      "summary": "Summary of key learnings and future directions in AI engineering.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    }
+  ]
+}

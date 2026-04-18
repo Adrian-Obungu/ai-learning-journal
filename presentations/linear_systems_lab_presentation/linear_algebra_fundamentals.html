@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Algebra Fundamentals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            box-sizing: border-box;
+            background: #0A2540;
+            display: flex;
+            flex-direction: column;
+            color: #E0E6ED;
+            padding: 50px 80px;
+            text-align: left;
+        }
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 32px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            color: #FFD700;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+        li {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+        li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background-color: #FFD700; /* Accent color for bullet points */
+            transform: rotate(45deg);
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h1>The Language of AI: Linear Algebra Fundamentals</h1>
+        <div class="content-grid">
+            <div>
+                <h2>What is a Linear Equation?</h2>
+                <ul>
+                    <li>An equation of the form $a_1x_1 + a_2x_2 + \dots + a_nx_n = b$.</li>
+                    <li>Variables to the first power, no multiplication between variables.</li>
+                    <li>Geometrically, represents a "flat" object (line, plane, hyperplane).</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Systems of Linear Equations</h2>
+                <ul>
+                    <li>Multiple linear equations considered simultaneously.</li>
+                    <li>Solution set: values satisfying all equations.</li>
+                    <li>Three outcomes: Unique solution, Infinitely many solutions, No solution.</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Matrices and Row Operations</h2>
+                <ul>
+                    <li>Compact representation of systems using **augmented matrices**.</li>
+                    <li>**Elementary Row Operations (EROs)**: Scaling, Swapping, Replacement.</li>
+                    <li>Goal: Transform matrix to **Reduced Row Echelon Form (RREF)** to easily find solutions.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

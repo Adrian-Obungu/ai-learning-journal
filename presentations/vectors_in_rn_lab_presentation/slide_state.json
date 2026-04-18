@@ -1,0 +1,144 @@
+{
+  "project_info": {
+    "title": "Mathematical Foundations for AI Engineering: Vectors in R^n & Span",
+    "created": 1776425866.976261,
+    "last_updated": 1776426197.9852395,
+    "total_slides": 11
+  },
+  "slides": [
+    {
+      "id": "title_slide",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "introduction_to_vectors",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "linear_combinations_and_axioms",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "the_concept_of_span",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "active_lab_overview",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "lab_complexity_level_1",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "lab_complexity_level_2",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "lab_complexity_level_3",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "real_world_applications",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "learn_along_protocol",
+      "state": "edited",
+      "pageNum": 10
+    },
+    {
+      "id": "closing_slide",
+      "state": "edited",
+      "pageNum": 11
+    }
+  ],
+  "outline": [
+    {
+      "id": "title_slide",
+      "title": "Mathematical Foundations for AI Engineering: Vectors in R^n & Span",
+      "summary": "Introduction to vectors, their operations, and the concept of span, with a focus on AI and Cybersecurity applications.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "title"
+    },
+    {
+      "id": "introduction_to_vectors",
+      "title": "Introduction to Vectors: The Language of Data",
+      "summary": "Define vectors algebraically and geometrically, and introduce basic operations like addition and scalar multiplication.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "content"
+    },
+    {
+      "id": "linear_combinations_and_axioms",
+      "title": "Linear Combinations & Vector Space Axioms",
+      "summary": "Explain linear combinations as the core of AI models and introduce vector space axioms for mathematical consistency.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "content"
+    },
+    {
+      "id": "the_concept_of_span",
+      "title": "The Concept of Span: Reach of Data",
+      "summary": "Define the span of vectors and its geometric interpretation, connecting it to data representation.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "content"
+    },
+    {
+      "id": "active_lab_overview",
+      "title": "Active Lab: Vector Operations & Span in Python",
+      "summary": "Overview of the Python lab, its objectives, and the tools used.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "content"
+    },
+    {
+      "id": "lab_complexity_level_1",
+      "title": "Complexity Level 1: Basic Operations & Span Check",
+      "summary": "Demonstrate basic vector operations and span checks using NumPy for rapid prototyping.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "content"
+    },
+    {
+      "id": "lab_complexity_level_2",
+      "title": "Complexity Level 2: Conceptual Span Check (Augmented Matrix)",
+      "summary": "Explain the equivalence between vector equations and augmented matrices for span consistency.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "content"
+    },
+    {
+      "id": "lab_complexity_level_3",
+      "title": "Complexity Level 3: Advanced Span Analysis",
+      "summary": "Delve into linear independence, basis, dimension, and their practical application in span analysis.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "content"
+    },
+    {
+      "id": "real_world_applications",
+      "title": "Real-World Applications: Vectors in AI & Cybersecurity",
+      "summary": "Connect vector concepts to practical applications in machine learning (embeddings, PCA) and cybersecurity (anomaly detection).",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "content"
+    },
+    {
+      "id": "learn_along_protocol",
+      "title": "Learn Along Protocol: Join the Journey",
+      "summary": "Reiterate the 'Learn Along' invitation and encourage audience engagement with the GitHub repository.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "content"
+    },
+    {
+      "id": "closing_slide",
+      "title": "Thank You & Connect",
+      "summary": "Closing remarks with author attribution and social media links.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": "closing"
+    }
+  ]
+}

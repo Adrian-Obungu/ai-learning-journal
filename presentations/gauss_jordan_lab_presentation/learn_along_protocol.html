@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #0A0A0A;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, #2E2E2E 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        .content-wrapper {
+            z-index: 3;
+            padding-top: 80px;
+            width: 100%;
+            max-width: 1100px;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 56px;
+            color: #00FFFF;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+        .protocol-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .protocol-item {
+            flex: 1;
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon-circle {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #FF00FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: #FF00FF;
+            margin-bottom: 25px;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+        }
+        .item-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            color: #00FFFF;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .item-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #E0E0E0;
+        }
+        .cta-box {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #2E2E2E;
+            width: 100%;
+        }
+        .github-link {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #FFFFFF;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 30px;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid #00FFFF;
+        }
+        .github-link i {
+            font-size: 32px;
+            color: #00FFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="content-wrapper">
+            <h1>Join the Journey: The 'Learn Along' Protocol</h1>
+            <div class="protocol-grid">
+                <div class="protocol-item">
+                    <div class="icon-circle"><i class="fas fa-code-branch"></i></div>
+                    <div class="item-title">Fork the Repo</div>
+                    <div class="item-text">Access the complete codebase, including the multi-level Active Labs and the Zettelkasten documentation structure.</div>
+                </div>
+                <div class="protocol-item">
+                    <div class="icon-circle"><i class="fas fa-book-open"></i></div>
+                    <div class="item-title">Learn the Logic</div>
+                    <div class="item-text">Follow the step-by-step modules to bridge the gap between mathematical theory and practical AI implementation.</div>
+                </div>
+                <div class="protocol-item">
+                    <div class="icon-circle"><i class="fas fa-tools"></i></div>
+                    <div class="item-title">Build the Future</div>
+                    <div class="item-text">Contribute your own insights, labs, and projects to the growing community of AI Engineering builders.</div>
+                </div>
+            </div>
+            <div class="cta-box">
+                <a href="https://github.com/Adrian-Obungu/ai-learning-journal" class="github-link" target="_blank">
+                    <i class="fab fa-github"></i> github.com/Adrian-Obungu/ai-learning-journal
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

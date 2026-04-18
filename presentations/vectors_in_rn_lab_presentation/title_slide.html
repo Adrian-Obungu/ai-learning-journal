@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Foundations for AI Engineering: Vectors in R^n & Span</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #0A1128;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            color: #E0E0E0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+        }
+        .content-area {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 0 80px;
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 64px;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 32px;
+            color: #00BFFF;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .author-info {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            color: #E0E0E0;
+            margin-top: 40px;
+            line-height: 1.5;
+        }
+        .author-info span {
+            color: #FF4500;
+            font-weight: 600;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: #E0E0E0;
+            font-size: 28px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="content-area">
+            <h1>Mathematical Foundations for AI Engineering</h1>
+            <h2>Vectors in R<sup>n</sup> & Span: The Language of Data</h2>
+            <div class="author-info">
+                Presented by: <span>Adrian S. Obungu</span><br>
+                Cybersecurity Professional in training
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/adrian-o-9b4856260?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" title="Connect on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Adrian-Obungu" target="_blank" title="Follow on GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

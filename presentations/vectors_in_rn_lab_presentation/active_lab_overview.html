@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Lab: Vector Operations & Span in Python</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #0A1128;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            color: #E0E0E0;
+            display: flex;
+            flex-direction: column;
+            padding-top: 40px;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+        }
+        .content-area {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 80px 40px 80px;
+            justify-content: center; /* Center content vertically */
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .main-content-block {
+            background-color: rgba(0, 191, 255, 0.05);
+            border: 1px solid rgba(0, 191, 255, 0.2);
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: #00BFFF;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(0, 191, 255, 0.3);
+            padding-bottom: 8px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+        ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+        }
+        ul li::before {
+            content: '\f058'; /* Font Awesome check-circle icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #FF4500;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .tools-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+        }
+        .tool-item {
+            font-size: 20px;
+            color: #FFD700;
+            font-weight: 600;
+        }
+        .tool-item i {
+            margin-right: 10px;
+            color: #00BFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="content-area">
+            <h1>Active Lab: Vector Operations & Span in Python</h1>
+            <div class="main-content-block">
+                <h2><i class="fas fa-flask"></i> Lab Purpose & Objectives</h2>
+                <p>This Active Lab bridges the theoretical understanding of vectors to practical implementation. It's designed to solidify your grasp of vector operations and the concept of 'span' through hands-on coding.</p>
+                <ul>
+                    <li>Implement fundamental vector addition and scalar multiplication.</li>
+                    <li>Develop functions to determine if a vector lies within the 'span' of others.</li>
+                    <li>Explore different complexity levels for solving linear systems related to span.</li>
+                    <li>Connect abstract mathematical concepts to real-world AI and cybersecurity applications.</li>
+                </ul>
+                <h2><i class="fas fa-tools"></i> Key Tools & Technologies</h2>
+                <div class="tools-list">
+                    <div class="tool-item"><i class="fab fa-python"></i> Python</div>
+                    <div class="tool-item"><i class="fas fa-calculator"></i> NumPy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
